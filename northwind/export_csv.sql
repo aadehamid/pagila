@@ -12,5 +12,6 @@ COPY (SELECT * FROM orders LEFT OUTER JOIN order_details ON order_details.OrderI
 
 COPY (SELECT * FROM employeeterritories LEFT OUTER JOIN territories ON territories.territoryid = employeeterritories.territoryid) TO '/var/lib/postgresql/data/northwind_csv/employeeterritories.csv' WITH CSV header;
 COPY (SELECT * FROM region) TO '/var/lib/postgresql/data/northwind_csv/region.csv' WITH CSV header;
-COPY (SELECT * FROM customers) TO '/var/lib/postgresql/data/northwind_csv/customers.csv' WITH CSV header;
+COPY (SELECT * FROM territories) TO '/var/lib/postgresql/data/northwind_csv/territories.csv' WITH CSV header;
+
 
